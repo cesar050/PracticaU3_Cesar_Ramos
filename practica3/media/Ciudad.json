@@ -1,1 +1,92 @@
-[{"id":1,"nombre":"Loja","latitud":-3.99313,"longitud":-79.20422},{"id":2,"nombre":"Catamayo","latitud":-3.98667,"longitud":-79.355},{"id":3,"nombre":"Calvas","latitud":-4.31392,"longitud":-79.5937},{"id":4,"nombre":"Puyango","latitud":-4.36389,"longitud":-79.92194},{"id":5,"nombre":"Saraguro","latitud":-3.61667,"longitud":-79.23333},{"id":6,"nombre":"Pindal","latitud":-4.16667,"longitud":-80.03333},{"id":7,"nombre":"Macara","latitud":-4.38333,"longitud":-79.95},{"id":8,"nombre":"Celica","latitud":-4.1,"longitud":-79.95},{"id":9,"nombre":"Espindola","latitud":-4.41667,"longitud":-79.4},{"id":10,"nombre":"Chaguarpamba","latitud":-3.81667,"longitud":-79.65},{"id":11,"nombre":"Olmedo","latitud":-3.92694,"longitud":-79.73333},{"id":12,"nombre":"Paltas","latitud":-4.03333,"longitud":-79.65},{"id":13,"nombre":"Gonzanama","latitud":-4.06667,"longitud":-79.36667},{"id":14,"nombre":"Sozoranga","latitud":-4.2,"longitud":-79.8},{"id":15,"nombre":"Quilanga","latitud":-4.3,"longitud":-79.33333}]
+[
+    {
+        "id": 1,
+        "nombre": "Loja",
+        "latitud": -3.99313,
+        "longitud": -79.20422
+    },
+    {
+        "id": 2,
+        "nombre": "Catamayo",
+        "latitud": -3.98667,
+        "longitud": -79.355
+    },
+    {
+        "id": 3,
+        "nombre": "Calvas",
+        "latitud": -4.31392,
+        "longitud": -79.5937
+    },
+    {
+        "id": 4,
+        "nombre": "Puyango",
+        "latitud": -4.36389,
+        "longitud": -79.92194
+    },
+    {
+        "id": 5,
+        "nombre": "Saraguro",
+        "latitud": -3.61667,
+        "longitud": -79.23333
+    },
+    {
+        "id": 6,
+        "nombre": "Pindal",
+        "latitud": -4.16667,
+        "longitud": -80.03333
+    },
+    {
+        "id": 7,
+        "nombre": "Macara",
+        "latitud": -4.38333,
+        "longitud": -79.95
+    },
+    {
+        "id": 8,
+        "nombre": "Celica",
+        "latitud": -4.1,
+        "longitud": -79.95
+    },
+    {
+        "id": 9,
+        "nombre": "Espindola",
+        "latitud": -4.41667,
+        "longitud": -79.4
+    },
+    {
+        "id": 10,
+        "nombre": "Chaguarpamba",
+        "latitud": -3.81667,
+        "longitud": -79.65
+    },
+    {
+        "id": 11,
+        "nombre": "Olmedo",
+        "latitud": -3.92694,
+        "longitud": -79.73333
+    },
+    {
+        "id": 12,
+        "nombre": "Paltas",
+        "latitud": -4.03333,
+        "longitud": -79.65
+    },
+    {
+        "id": 13,
+        "nombre": "Gonzanama",
+        "latitud": -4.06667,
+        "longitud": -79.36667
+    },
+    {
+        "id": 14,
+        "nombre": "Sozoranga",
+        "latitud": -4.2,
+        "longitud": -79.8
+    },
+    {
+        "id": 15,
+        "nombre": "Quilanga",
+        "latitud": -4.3,
+        "longitud": -79.33333
+    }
+]
