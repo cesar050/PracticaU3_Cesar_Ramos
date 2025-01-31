@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Grafo de Ciudades</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #mynetwork {
+            width: 100%;
+            height: 700px;
+            border: 1px solid rgba(145, 33, 33, 0.753);
+            background-color: #B3E5FC; /* Celeste pastel */
+        }
+        .controls {
+            margin: 10px 0;
+            padding: 10px;
+            background: #225f7a98; /* Celeste muy claro */
+            border-radius: 5px;
+        }
+        .controls button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            border: 1px solid #81D4FA; /* Borde celeste */
+            border-radius: 3px;
+            background: #B3E5FC; /* Celeste pastel */
+            cursor: pointer;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grafo de Ciudades</h1>
+    
+    <!-- Formulario para seleccionar las ciudades y el algoritmo -->
+    <div class="controls">
+        <div class="form-group">
+            <label for="origen">Ciudad de Origen (Número):</label>
+            <select id="origen">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="destino">Ciudad de Destino (Número):</label>
+            <select id="destino">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="algoritmo">Seleccionar Algoritmo:</label>
+            <select id="algoritmo">
+                <option value="1">Dijkstra</option>
+                <option value="2">Floyd</option>
+            </select>
+        </div>
+
+        <button onclick="calcularCaminoCorto()">Calcular Camino Corto</button>
+    </div>
+
+    <div id="mynetwork"></div>
+
+    <h2>Resultados de Algoritmos</h2>
+    <div>
+        <h3>Resultado del Camino Corto</h3>
+        <pre id="camino-corto-result"></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <script type="text/javascript">
+        var graphData = {{ graph_data | tojson | safe }};
+        console.log("Datos del grafo:", graphData);
+
+        var nodes = new vis.DataSet(graphData.nodos || []);
+        var edges = new vis.DataSet(graphData.aristas || []);
+
+        var container = document.getElementById('mynetwork');
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+        
+        var options = {
+            nodes: {
+                shape: 'dot',
+                size: 30,
+                font: {
+                    size: 14,
+                    color: '#225f7a98' // Blanco para resaltar en negro
+                },
+                borderWidth: 2,
+                shadow: true
+            },
+            edges: {
+                width: 2,
+                color: {
+                    color: '#00AEEF',        // Azul vibrante para bordes normales
+                    highlight: '#FF3D00',    // Rojo anaranjado para resaltar
+                    hover: '#FFD700'         // Dorado para hover
+                },
+                font: {
+                    size: 12,
+                    color: '#FFFFFF', // Blanco para que sea visible en fondo negro
+                    align: 'middle'
+                },
+                smooth: {
+                    type: 'continuous',
+                    forceDirection: 'none',
+                    roundness: 0.5
+                }
+            },
+            physics: {
+                enabled: true,
+                solver: 'forceAtlas2Based',
+                forceAtlas2Based: {
+                    gravitationalConstant: -50,
+                    centralGravity: 0.01,
+                    springLength: 200,
+                    springConstant: 0.05,
+                    damping: 0.4
+                },
+                stabilization: {
+                    enabled: true,
+                    iterations: 1000,
+                    updateInterval: 25
+                }
+            },
+            interaction: {
+                hover: true,
+                tooltipDelay: 200,
+                zoomView: true,
+                dragView: true,
+                navigationButtons: true,
+                keyboard: true
+            }
+        };
+
+        var network = new vis.Network(container, data, options);
+
+        network.once('afterDrawing', function() {
+            network.fit({
+                animation: true
+            });
+        });
+
+        // Función para calcular el camino corto
+        function calcularCaminoCorto() {
+            var origen = document.getElementById("origen").value;
+            var destino = document.getElementById("destino").value;
+            var algoritmo = document.getElementById("algoritmo").value;
+            
+            // Realizar la solicitud al servidor para obtener el camino corto
+            fetch(`/camino_corto/${origen}/${destino}/${algoritmo}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Mostrar el resultado del camino corto en la interfaz
+                    document.getElementById("camino-corto-result").textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error al calcular el camino corto:', error);
+                    document.getElementById("camino-corto-result").textContent = 'Hubo un error al calcular el camino corto.';
+                });
+        }
+    </script>
+</body>
+</html>

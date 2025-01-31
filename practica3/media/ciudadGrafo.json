@@ -1,0 +1,347 @@
+[
+  {
+    "id": 1,
+    "nombre": "Loja",
+    "adyacencias": [
+      {
+        "destino": 11,
+        "peso": 2.671959
+      },
+      {
+        "destino": 6,
+        "peso": 1.8903089
+      },
+      {
+        "destino": 4,
+        "peso": 4.1767974
+      },
+      {
+        "destino": 8,
+        "peso": 8.958149
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 2,
+    "nombre": "Catamayo",
+    "adyacencias": [
+      {
+        "destino": 15,
+        "peso": 4.014406
+      },
+      {
+        "destino": 7,
+        "peso": 1.5473264
+      },
+      {
+        "destino": 14,
+        "peso": 4.4485803
+      },
+      {
+        "destino": 9,
+        "peso": 6.649032
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 3,
+    "nombre": "Calvas",
+    "adyacencias": [
+      {
+        "destino": 5,
+        "peso": 7.231697
+      },
+      {
+        "destino": 13,
+        "peso": 5.8360915
+      },
+      {
+        "destino": 7,
+        "peso": 3.5974483
+      },
+      {
+        "destino": 14,
+        "peso": 0.3981763
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 4,
+    "nombre": "Puyango",
+    "adyacencias": [
+      {
+        "destino": 15,
+        "peso": 8.011419
+      },
+      {
+        "destino": 13,
+        "peso": 9.158315
+      },
+      {
+        "destino": 14,
+        "peso": 8.653711
+      },
+      {
+        "destino": 2,
+        "peso": 7.7512903
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 5,
+    "nombre": "Saraguro",
+    "adyacencias": [
+      {
+        "destino": 13,
+        "peso": 2.4616008
+      },
+      {
+        "destino": 1,
+        "peso": 8.140051
+      },
+      {
+        "destino": 11,
+        "peso": 5.3300405
+      },
+      {
+        "destino": 12,
+        "peso": 6.2617354
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 6,
+    "nombre": "Pindal",
+    "adyacencias": [
+      {
+        "destino": 2,
+        "peso": 9.584466
+      },
+      {
+        "destino": 14,
+        "peso": 6.167783
+      },
+      {
+        "destino": 7,
+        "peso": 4.3100843
+      },
+      {
+        "destino": 8,
+        "peso": 3.0058117
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 7,
+    "nombre": "Macara",
+    "adyacencias": [
+      {
+        "destino": 10,
+        "peso": 0.82945406
+      },
+      {
+        "destino": 2,
+        "peso": 1.3913721
+      },
+      {
+        "destino": 8,
+        "peso": 5.8822846
+      },
+      {
+        "destino": 13,
+        "peso": 0.21395206
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 8,
+    "nombre": "Celica",
+    "adyacencias": [
+      {
+        "destino": 7,
+        "peso": 6.658444
+      },
+      {
+        "destino": 6,
+        "peso": 1.815651
+      },
+      {
+        "destino": 14,
+        "peso": 6.152777
+      },
+      {
+        "destino": 4,
+        "peso": 6.8532677
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 9,
+    "nombre": "Espindola",
+    "adyacencias": [
+      {
+        "destino": 14,
+        "peso": 5.418758
+      },
+      {
+        "destino": 8,
+        "peso": 7.139091
+      },
+      {
+        "destino": 11,
+        "peso": 5.196103
+      },
+      {
+        "destino": 15,
+        "peso": 2.0577617
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 10,
+    "nombre": "Chaguarpamba",
+    "adyacencias": [
+      {
+        "destino": 2,
+        "peso": 4.8192496
+      },
+      {
+        "destino": 7,
+        "peso": 2.6620543
+      },
+      {
+        "destino": 9,
+        "peso": 2.4003696
+      },
+      {
+        "destino": 15,
+        "peso": 3.6158717
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 11,
+    "nombre": "Olmedo",
+    "adyacencias": [
+      {
+        "destino": 7,
+        "peso": 0.28996527
+      },
+      {
+        "destino": 8,
+        "peso": 3.2283127
+      },
+      {
+        "destino": 1,
+        "peso": 0.11839807
+      },
+      {
+        "destino": 6,
+        "peso": 1.6259944
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 12,
+    "nombre": "Paltas",
+    "adyacencias": [
+      {
+        "destino": 1,
+        "peso": 6.7077923
+      },
+      {
+        "destino": 14,
+        "peso": 9.017612
+      },
+      {
+        "destino": 2,
+        "peso": 8.818868
+      },
+      {
+        "destino": 9,
+        "peso": 0.8709121
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 13,
+    "nombre": "Gonzanama",
+    "adyacencias": [
+      {
+        "destino": 15,
+        "peso": 6.8355823
+      },
+      {
+        "destino": 8,
+        "peso": 5.909981
+      },
+      {
+        "destino": 5,
+        "peso": 9.442872
+      },
+      {
+        "destino": 14,
+        "peso": 3.768655
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 14,
+    "nombre": "Sozoranga",
+    "adyacencias": [
+      {
+        "destino": 1,
+        "peso": 4.807027
+      },
+      {
+        "destino": 2,
+        "peso": 6.164317
+      },
+      {
+        "destino": 11,
+        "peso": 5.127347
+      },
+      {
+        "destino": 8,
+        "peso": 4.219084
+      }
+    ],
+    "grado": 4
+  },
+  {
+    "id": 15,
+    "nombre": "Quilanga",
+    "adyacencias": [
+      {
+        "destino": 6,
+        "peso": 1.2370193
+      },
+      {
+        "destino": 3,
+        "peso": 9.83602
+      },
+      {
+        "destino": 4,
+        "peso": 3.407321
+      },
+      {
+        "destino": 1,
+        "peso": 0.48414052
+      }
+    ],
+    "grado": 4
+  }
+]
